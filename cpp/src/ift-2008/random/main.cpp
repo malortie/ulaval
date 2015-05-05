@@ -11,42 +11,39 @@ using namespace std;
 
 using namespace ulaval;
 
-int main(int argc, char** argv)
+
+// Définition d'une fonction lambda pour la comparaision.
+bool predicat(int i, int j)
 {
+	return (i < j);
+};
 
-	// Définition d'une fonction lambda pour la comparaision.
-	auto predicat = [](int i, int j) -> bool 
-	{ 
-		return (i < j);
-	};
-
-	// Définition d'une fonction pour afficher un message d'utilisation de la
-	// classe CompteurTemporel.
-	auto afficher_message = [](const char* message) 
-	{
-		std::cout << "***\t\tIFT-2008\t\t***\n"
+// Définition d'une fonction pour afficher un message d'utilisation de la
+// classe CompteurTemporel.
+void afficher_message(const char* message)
+{
+	std::cout << "***\t\tIFT-2008\t\t***\n"
 		<< "*\n"
 		<< "* Voici un example pour l'utilisation de la classe CompteurTemporel.\n"
 		<< "*\n"
 		<< "* " << message << "\n"
 		<< "*\n"
 		<< "***\n\n";
-	};
+};
 
-	// Définition d'une fonction lambda pour la comparaison.
-	auto afficher_duree = [](double duree)
-	{
-		std::cout << "Temps d'execution de la recherche:\n"
-			<< "(s)   : " << std::fixed << duree			<< "\n"
-			<< "(ms)  : " << std::fixed << duree * 1e+3		<< "\n"
-			<< "(mcs) : " << std::fixed << duree * 1e+6		<< "\n"
-			<< "(ns)  : " << std::fixed << duree * 1e+9		<< "\n"
-			<< "(ps)  : " << std::fixed << duree * 1e+12	<< "\n\n";
-	};
+// Définition d'une fonction lambda pour la comparaison.
+void afficher_duree(double duree)
+{
+	std::cout << "Temps d'execution de la recherche:\n"
+		<< "(s)   : " << std::fixed << duree << "\n"
+		<< "(ms)  : " << std::fixed << duree * 1e+3 << "\n"
+		<< "(mcs) : " << std::fixed << duree * 1e+6 << "\n"
+		<< "(ns)  : " << std::fixed << duree * 1e+9 << "\n"
+		<< "(ps)  : " << std::fixed << duree * 1e+12 << "\n\n";
+};
 
-
-
-
+int main(int argc, char** argv)
+{
 	// Création d'un objet de type compteur (non actif)
 	ulaval::CompteurTemporel<double> compteur(false);
 
