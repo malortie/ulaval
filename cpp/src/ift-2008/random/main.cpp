@@ -48,8 +48,7 @@ int main(int argc, char** argv)
 
 
 	// Création d'un objet de type compteur (non actif)
-	CompteurTemporel<double, std::milli, std::chrono::duration<double, std::milli>>
-		compteur(false);
+	ulaval::CompteurTemporel<double> compteur(false);
 
 
 	// Définition de la valeur minimale du nombre aléatoire.
