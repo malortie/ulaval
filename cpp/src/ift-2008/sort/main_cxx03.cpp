@@ -10,7 +10,6 @@
 #include <string.h>
 #include <istream>
 #include <vector>
-#include <random>
 #include <algorithm>
 
 #include "ulaval/time_measure_cxx03.h"
@@ -85,7 +84,7 @@ int next_random(int p_min, int p_max)
 int main(int argc, char** argv)
 {
 	// Création d'un objet de type compteur (non actif)
-	CompteurTemporel<double> compteur(false);
+	CompteurTemporel<double, ulaval::RatioTemporel::ratio_ms> compteur(false);
 
 	// Définition de la valeur minimale du nombre aléatoire.
 	const int RANGE_MIN = 1;
@@ -117,7 +116,7 @@ int main(int argc, char** argv)
 	afficher_message("Trier une liste en utilisant std::sort()");
 
 	// Ajout d'entiers dans le vecteur.
-	for (auto it = vecteur.begin(); it < vecteur.end(); ++it)
+	for (std::vector<int>::iterator it = vecteur.begin(); it < vecteur.end(); ++it)
 		*it = next_random(RANGE_MIN, RANGE_MAX);
 
 	// Remise a zéro du compteur.

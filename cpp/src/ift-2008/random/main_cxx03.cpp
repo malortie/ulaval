@@ -10,7 +10,6 @@
 #include <string.h>
 #include <istream>
 #include <vector>
-#include <random>
 #include <algorithm>
 
 #include "ulaval/time_measure_cxx03.h"
@@ -83,8 +82,7 @@ int next_random(int p_min, int p_max)
 int main(int argc, char** argv)
 {
 	// Création d'un objet de type compteur (non actif)
-	ulaval::CompteurTemporel<double> compteur(false);
-
+	ulaval::CompteurTemporel<double, ulaval::ratio_ms> compteur(false);
 
 	// Définition de la valeur minimale du nombre aléatoire.
 	const unsigned long long RANGE_MIN = 1;
@@ -110,16 +108,16 @@ int main(int argc, char** argv)
 
 
 	/**
-	 * Exemple: Recherche d'une valeur arbitraire dans un vecteur
-	 *
-	 */
+	* Exemple: Recherche d'une valeur arbitraire dans un vecteur
+	*
+	*/
 
 	// Affichage des informations du programmes.
 	afficher_message("Recherche d'une valeur arbitraire dans un vecteur");
 
 
 	// Définition d'une constante pour le nombre maximal d'iteration.
-	const size_t NOMBRE_ITERATION_MAX = 50;
+	const size_t NOMBRE_ITERATION_MAX = 1000;
 
 	// Définition d'une variable pour le nombre d'iteration.
 	size_t iter = 0;
@@ -130,39 +128,52 @@ int main(int argc, char** argv)
 	// Définition d'une variable de condition pour la recherche.
 	bool continuerRecherche = true;
 
+	// Définition d'une variable de condition pour la localisation de
+	// l'indice.
+	bool valeurTrouvee = false;
+
 	// Suppression des valeurs anterieures.
 	vecteur.clear();
 	vecteur.resize(NOMBRE_ELEMENTS);
-
 	// Ajout d'entiers dans le vecteur.
-	for (auto it = vecteur.begin(); it < vecteur.end(); ++it)
-		*it = next_random(RANGE_MIN, RANGE_MAX);
+	for (std::vector<int>::iterator it = vecteur.begin(); it < vecteur.end(); ++it)
+		(*it) = next_random(RANGE_MIN, RANGE_MAX);
 
-	// Remise a zero du compteur.
+	// Remise a zéro du compteur.
 	compteur.reinitialiser(true);
 
-	// Debut de la boucle.
+
+	// Début de la boucle.
 	while (continuerRecherche && iter < NOMBRE_ITERATION_MAX)
 	{
-		// Affectation arbitraire d'une valeur entiere.
+		// Affectation arbitraire d'une valeur entière.
 		valeur = next_random(RANGE_MIN, RANGE_MAX);
 
-		// Définition de l'indice (position de l'iterateur) une fois la valeur trouvee.
-		auto index = std::find(vecteur.begin(), vecteur.end(), valeur);
-
 		// Affichage de l'indice (si non-nul)
-		if (index != vecteur.end())
+		for (size_t i = 0; i < vecteur.size() && !valeurTrouvee; ++i)
 		{
-			// Affichage de la valeur trouvee.
-			std::cout
-				<< "La valeur recherchee ("
-				<< valeur
-				<< ") se trouve a l'indice ("
-				<< index - vecteur.begin()
-				<< ")\n\n";
+			// Affichage de l'indice (si non-nul)
+			if (vecteur.at(i) == valeur)
+			{
+				// Affichage de l'iteration:
+				std::cout
+					<< "iteration: "
+					<< iter
+					<< "\n\n";
 
-			// Arret de la recherche.
-			continuerRecherche = false;
+				// Affichage de la valeur trouvee.
+				std::cout
+					<< "La valeur recherchee ("
+					<< valeur
+					<< ") se trouve a l'indice ("
+					<< i
+					//<< index - vecteur.begin()
+					<< ")\n\n";
+
+				// Arret de la recherche.
+				continuerRecherche = false;
+				valeurTrouvee = true;
+			}
 		}
 
 		// Incrementation du nombre d'itération.
@@ -172,8 +183,22 @@ int main(int argc, char** argv)
 	// Capture de la durée.
 	duree = compteur.duree() * 1e-3;
 
-	// Affichage du temps d'éxécution de la recherche.
-	afficher_duree(duree);
+	// Si la valeur recherchée est localisée, affichage de l'interval
+	// de temps.
+	if (valeurTrouvee)
+	{
+		// Affichage du temps d'éxécution de la recherche.
+		afficher_duree(duree);
+	}
+	else
+	{
+		// Aucune valeur trouvée.
+		std::cout
+			<< "Aucune valeur trouvée."
+			<< "\n"
+			<< "Veuillez relancer l'application."
+			<< "\n\n";
+	}
 
 	return 0;
 }
