@@ -1,6 +1,6 @@
 /**
 * \file time_measure.h
-* \brief Compteur temporel permettant de mesurer le temps d'éxécution d'un algorithme.
+* \brief Fichier d'en-tÃªte dÃ©finis pour la portabilitÃ©.
 * \author Marc-Antoine Lortie
 * \version 1.0
 * \date 5/4/2015
