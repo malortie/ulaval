@@ -1,15 +1,15 @@
 #Trucs et astuces
 
-Il est recommandÈ d'avoir lu et de comprendre les notions de base en logique de premier ordre. Les concepts prÈsents dans cette page feront rÈfÈrence ‡ des concepts de base avec le [calcul propositionnel](http://fr.wikipedia.org/wiki/Calcul_des_propositions).
+Il est recommand√© d'avoir lu et de comprendre les notions de base en logique de premier ordre. Les concepts pr√©sents dans cette page feront r√©f√©rence √† des concepts de base avec le [calcul propositionnel](http://fr.wikipedia.org/wiki/Calcul_des_propositions).
 
-[Rappel sur les tables de vÈritÈ](https://github.com/malortie/ulaval/wiki/Logique-en-programmation#tables-de-v%C3%A9rit%C3%A9)
+[Rappel sur les tables de v√©rit√©](#tables-de-v%C3%A9rit%C3%A9)
 
 
-##Table des matiËres
-* [Intervertir deux entiers sans dÈclarer de variable temporaire](https://github.com/malortie/ulaval/wiki/Trucs-et-astuces#intervertir-deux-entiers-sans-d%C3%A9clarer-de-variable-temporaire)
-* [Encoder une couleur 32 bits RGBA sur un entier de 4 octets](https://github.com/malortie/ulaval/wiki/Trucs-et-astuces#encoder-une-couleur-32-bits-rgba-sur-un-entier-int-de-4-octets)
+##Table des mati√®res
+* [Intervertir deux entiers sans d√©clarer de variable temporaire](#intervertir-deux-entiers-sans-d%C3%A9clarer-de-variable-temporaire)
+* [Encoder une couleur 32 bits RGBA sur un entier de 4 octets](#encoder-une-couleur-32-bits-rgba-sur-un-entier-int-de-4-octets)
 
-##Intervertir deux entiers sans dÈclarer de variable temporaire.
+##Intervertir deux entiers sans d√©clarer de variable temporaire.
 ```cpp
 
 int a = 2;
@@ -20,14 +20,14 @@ b ^= a;
 a ^= b;
 ```
 
-####PrÈcision
+####Pr√©cision
 
-Pour comprendre cette opÈration, il faut connaÓtre la reprÈsentation binaire.  
+Pour comprendre cette op√©ration, il faut conna√Ætre la repr√©sentation binaire.  
 
 > a ? 2 ? 00000010  
 > b ? 3 ? 00000011  
 
-Par la suite il faut appliquer la [disjonction exclusive](https://github.com/malortie/ulaval/wiki/Logique-en-programmation#disjonction-exclusive) sur chacun des bits des entiers.
+Par la suite il faut appliquer la [disjonction exclusive](../../common/ulaval-logistique.md#disjonction-exclusive) sur chacun des bits des entiers.
 
 
 ####Rappel 
@@ -39,9 +39,9 @@ Par la suite il faut appliquer la [disjonction exclusive](https://github.com/mal
 | 0 | 1 | 1 |
 | 0 | 0 | 0 |
 
-####DÈmonstration
+####D√©monstration
 
-Chaque ligne de la table reprÈsente le premier octet (8 bits) de chacun des entiers.  
+Chaque ligne de la table repr√©sente le premier octet (8 bits) de chacun des entiers.  
 
 ```cpp
 a ^= b // a = a ^ b
@@ -96,28 +96,28 @@ Comme convenu.
 
 ```cpp
 
-unsigned char rgba[] = { 255, 192, 42, 176}; // …quivaut ‡
+unsigned char rgba[] = { 255, 192, 42, 176}; // √âquivaut √†
                                               // rgba [0] = 255;
                                               // rgba [1] = 192;
                                               // rgba [2] = 42;
                                               // rgba [3] = 176;
 
 
-unsigned int couleur = rgba[0] << 24 | // DÈcalage de 24 bits vers la gauche des 8 premiers bits de rgba.
-                       rgba[1] << 16 | // DÈcalage de 16 bits vers la gauche des 8 seconds bits de rgba.
-                       rgba[2] << 8  | // DÈcalage de 8 bits vers la gauche des 8 tertiaires bits de rgba.
-                       rgba[3];        // Aucun dÈcalage.
+unsigned int couleur = rgba[0] << 24 | // D√©calage de 24 bits vers la gauche des 8 premiers bits de rgba.
+                       rgba[1] << 16 | // D√©calage de 16 bits vers la gauche des 8 seconds bits de rgba.
+                       rgba[2] << 8  | // D√©calage de 8 bits vers la gauche des 8 tertiaires bits de rgba.
+                       rgba[3];        // Aucun d√©calage.
 
-            // ProcÈdÈ Èquivalent
-            // (+ 0) est actuellement inutile. Il est utilisÈ pour 
+            // Proc√©d√© √©quivalent
+            // (+ 0) est actuellement inutile. Il est utilis√© pour 
             // simplifier l'alignement du texte.
-            couleur = *(rgba + 0) << 24 | // DÈcalage de 24 bits vers la gauche des 8 premiers bits de rgba.
-                      *(rgba + 1) << 16 | // DÈcalage de 16 bits vers la gauche des 8 seconds bits de rgba.
-                      *(rgba + 2) << 8  | // DÈcalage de 8 bits vers la gauche des 8 tertiaires bits de rgba.
-                      *(rgba + 3);        // Aucun dÈcalage.   
+            couleur = *(rgba + 0) << 24 | // D√©calage de 24 bits vers la gauche des 8 premiers bits de rgba.
+                      *(rgba + 1) << 16 | // D√©calage de 16 bits vers la gauche des 8 seconds bits de rgba.
+                      *(rgba + 2) << 8  | // D√©calage de 8 bits vers la gauche des 8 tertiaires bits de rgba.
+                      *(rgba + 3);        // Aucun d√©calage.   
 ```
 
-####DÈmonstration
+####D√©monstration
 
 Soit **r**, **g**, **b**, **a**,    4 octets.
 > **r** ? 255 ? 11111111  
@@ -126,7 +126,7 @@ Soit **r**, **g**, **b**, **a**,    4 octets.
 > **a** ? 176 ? 10110000  
 
 
-Soit la table suivante, ou chaque colone reprÈsente 4 bits, soit Ω octet
+Soit la table suivante, ou chaque colone repr√©sente 4 bits, soit ¬Ω octet
 
 |0000|0000|0000|0000|0000|0000|0000|0000|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -191,5 +191,5 @@ rgba[3]
 
 Nous avons donc:
 > `couleur` (forme binaire) ? `11111111 11000000 00101010 10110000`  
-> `couleur` (forme dÈcimale) ? `4290788016`  
-> `couleur` (forme hexadÈcimale) ? `0xffc03ab0`  
+> `couleur` (forme d√©cimale) ? `4290788016`  
+> `couleur` (forme hexad√©cimale) ? `0xffc03ab0`  
