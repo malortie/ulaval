@@ -1,7 +1,7 @@
 # ulaval
 
 * [Wiki](https://github.com/malortie/ulaval#wiki)
-* [Licence](https://github.com/malortie/ulaval#license)
+* [License](https://github.com/malortie/ulaval#license)
 
 
 ##Description
