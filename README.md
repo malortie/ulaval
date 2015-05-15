@@ -1,16 +1,16 @@
 # ulaval
 
-* [Wiki](Wiki)
-* [Licence](Licence)
+* [Wiki](#Wiki)
+* [Licence](#Licence)
 
 
 ##Description
 
-This repository is intended to be used as a reference, as well as a set of resources for anyone involved in IT, engineering or other disciplines related to computer science. Make sure to read the [Terms of use](Licence) as listed below.
+This repository is intended to be used as a reference, as well as a set of resources for anyone involved in IT, engineering or other disciplines related to computer science. Make sure to read the [Terms of use](#Licence) as listed below.
 
 ##Wiki
 
-[Link to Wiki](wiki#welcome-to-the-ulaval-wiki).
+[Link to Wiki](#wiki#welcome-to-the-ulaval-wiki).
 
 ##Licence
 
