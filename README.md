@@ -1,6 +1,6 @@
 # ulaval
 
-* [Wiki](,,/../wiki)
+* [Wiki](#Wiki)
 * [Licence](#Licence)
 
 
@@ -10,7 +10,7 @@ This repository is intended to be used as a reference, as well as a set of resou
 
 ##Wiki
 
-[Link to Wiki](,,/../wiki).
+[Link to Wiki](../../Wiki).
 
 ##Licence
 
