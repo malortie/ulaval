@@ -1,6 +1,6 @@
 # ulaval
 
-* [Wiki](#Wiki)
+* [Wiki](#wiki)
 * [Licence](#Licence)
 
 
