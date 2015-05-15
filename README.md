@@ -1,16 +1,16 @@
 # ulaval
 
-* [Wiki](#Wiki)
-* [Licence](#Licence)
+* [Wiki](https://github.com/malortie/ulaval#wiki)
+* [Licence](https://github.com/malortie/ulaval#licence)
 
 
 ##Description
 
-This repository is intended to be used as a reference, as well as a set of resources for anyone involved in IT, engineering or other disciplines related to computer science. Make sure to read the [Terms of use](#Licence) as listed below.
+This repository is intended to be used as a reference, as well as a set of resources for anyone involved in IT, engineering or other disciplines related to computer science. Make sure to read the [Terms of use](https://github.com/malortie/ulaval#licence) as listed below.
 
 ##Wiki
 
-[Link to Wiki](../../Wiki).
+[Link to Wiki](https://github.com/malortie/ulaval/wiki).
 
 ##Licence
 
