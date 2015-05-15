@@ -1,4 +1,4 @@
 #Langage C
 
-##Table des matières
-* [Libraire standard C (cstdlib)](https://github.com/malortie/ulaval/wiki/Librairie-cstdlib)
+##Table des matiÃ¨res
+* [Libraire standard C](ulaval-c-standard-library)
