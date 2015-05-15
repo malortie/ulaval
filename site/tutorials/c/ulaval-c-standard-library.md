@@ -1,35 +1,35 @@
 #Librairie String
 
-* [Manipulation de chaînes de charactères](https://github.com/malortie/ulaval/wiki/C---Librairie-String#manipulation-de-cha%C3%AEnes-de-charact%C3%A8res)
+* [Manipulation de chaÃ®nes de charactÃ¨res](#manipulation-de-cha%C3%AEnes-de-charact%C3%A8res)
 
-##Manipulation de chaînes de charactères
+##Manipulation de chaÃ®nes de charactÃ¨res
 
-* [strcpy](https://github.com/malortie/ulaval/wiki/C---Librairie-String#strcpy)
+* [strcpy](#strcpy)
 
 ###strcpy
 
-####Déclaration
+####DÃ©claration
 
 ```c
 char *strcpy( char *destination, const char *source );
 ```
 
 ####Description
-La fonction **strcpy** permet de copier une [chaîne de charactère](http://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res) de **_source_** vers **_destination_**.
+La fonction **strcpy** permet de copier une [chaÃ®ne de charactÃ¨re](http://fr.wikipedia.org/wiki/Cha%C3%AEne_de_caract%C3%A8res) de **_source_** vers **_destination_**.
 
-####Paramètres
+####ParamÃ¨tres
 * `destination`  
-La **_destination_** ou copier les charactères.
+La **_destination_** ou copier les charactÃ¨res.
 
 * `source`  
-La **_source_** à partir de laquelle les charactères seront copiés.
+La **_source_** Ã  partir de laquelle les charactÃ¨res seront copiÃ©s.
 
 ####Retour
 **strcpy** retourne **_destination_**.
 
 #####Remarques
-**_destination_** doit être suffisament large, incluant le [charactère nul](http://en.wikipedia.org/wiki/Null_character) pour recevoir la **_source_**.  
-Si la taille de **_destination_** est inférieure à celle de **_source_**, le résultat est [non-défini]
+**_destination_** doit Ãªtre suffisament large, incluant le [charactÃ¨re nul](http://en.wikipedia.org/wiki/Null_character) pour recevoir la **_source_**.  
+Si la taille de **_destination_** est infÃ©rieure Ã  celle de **_source_**, le rÃ©sultat est [non-dÃ©fini]
 (http://en.wikipedia.org/wiki/Undefined_behavior).
 
 ####Exemple
@@ -38,8 +38,8 @@ const char* source = "Texte"; // {'T','e','x','t','e','\0'}
 char destination[6];
 strcpy(destination, source);
 
-// Affiche la chaîne de charactères "Texte" 
-// à la console, sans les guillements.
+// Affiche la chaÃ®ne de charactÃ¨res "Texte" 
+// Ã  la console, sans les guillements.
 puts(destination);
 ```
 
