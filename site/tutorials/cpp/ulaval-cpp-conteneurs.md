@@ -5,22 +5,22 @@ Cette section ne liste pas tous les [conteneurs](http://en.wikipedia.org/wiki/Co
 
 ---
 
-* [Conteneurs de séquences]()
-  * [array]()
-  * [deque]()
-  * [list]()
-  * [vector]()
-* [Conteneurs associatifs]()
-  * [map]()
-  * [set]()
-* [Adaptateurs de conteneurs]()
-  * [queue]()
-  * [stack]()
+* [Conteneurs de séquences](#conteneurs-de-s%C3%A9quences)
+  * [array](#array)
+  * [deque](#deque)
+  * [list](#list)
+  * [vector](#vector)
+* [Conteneurs associatifs](#conteneurs-associatifs)
+  * [map](#map)
+  * [set](#set)
+* [Adaptateurs de conteneurs](#adaptateurs-de-conteneurs)
+  * [queue](#queue)
+  * [stack](#stack)
 
 
 ##Conteneurs de séquences
 
-###[array](http://en.cppreference.com/w/cpp/container/array))
+###[array](http://en.cppreference.com/w/cpp/container/array)
 
 Un tableau est un [conteneur](http://fr.wikipedia.org/wiki/Conteneur_(informatique)) de taille constante **_N_** ne pouvant être redimensionné après la [compilation](http://fr.wikipedia.org/wiki/Compilateur). Il s'agit d'une équivalence au [tableau C](http://en.wikipedia.org/wiki/C_syntax#Array_definition) définie de façon [générique](http://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9ricit%C3%A9).
 
