@@ -53,20 +53,20 @@ int main() {
     a.at(2) = -8; // {0, 0, -8, 0}
 
     // Affectation de la valeur 2 au dernier indice de a.
-    a.at(a.size() - 1) = 2;	// {0, 0, -8, 2}
+    a.at(a.size() - 1) = 2;  // {0, 0, -8, 2}
 
     // N <= 0
     std::cout << std::boolalpha 
 		  << a.empty() 
-		  << std::endl;	// false
+		  << std::endl;	 // false
 
     // N > 0
     std::cout << std::boolalpha
 		   << !a.empty()
-	           << std::endl;	// true
+	           << std::endl; // true
 
     // Valeur à l'indice 0
-	*a.begin();				// 0
+	*a.begin();	   // 0
 
 	// Affectation de la valeur 7 au premier indice de a.
 	(*a.begin()) = 7; // {7, 0, -8, 2}
@@ -74,7 +74,7 @@ int main() {
 	/*	Inversion de 7 avec 2
 		Syntaxe des pointeurs */
 	*a.begin()	^= *a.end();    // {5, 0, -8, 2 }
-	*a.end()	^= *a.begin();    // {5, 0, -8, 7 }
+	*a.end()	^= *a.begin();	// {5, 0, -8, 7 }
 	*a.begin()	^= *a.end();	// {2, 0, -8, 7 }
 
 	/*	Inversion de 7 avec 2
@@ -226,18 +226,18 @@ int main() {
     v.push_back(4);	    // {1 2 3 4}
 
     // Retrait d'éléments à la fin de v.
-    v.pop_back();	      // {1 2 3}
-    v.pop_back();	      // {1 2}
+    v.pop_back();	    // {1 2 3}
+    v.pop_back();	    // {1 2}
 
     // Ajout d'éléments à la fin de v.
     v.push_back(5);	    // {1 2 5}
     v.push_back(6);	    // {1 2 5 6}
 
     // Modification de l'élément à l'indice 2 de v.
-    *(v.begin() + 2) = -5; // {1 2 -5 6}
+    *(v.begin() + 2) = -5;  // {1 2 -5 6}
 
     // Suppression de tous les éléments de v.
-    v.clear();		     // {}
+    v.clear();		    // {}
 
     return 0;
 }
@@ -295,16 +295,16 @@ int main() {
 	// soit  (const char* -> double)
 
 	m.insert(std::make_pair("pi", 3.1415)); /* { ("e", 2.71828),  "e" -> 2.71828
-											     ("pi", 3.1415) } "pi" -> 3.1415 */
+						     ("pi", 3.1415) } "pi" -> 3.1415 */
 
 	m.insert(std::make_pair("phi", 1.68033)); /* { ("e", 2.71828),	"e"   -> 2.71828
-												   ("pi", 3.1415),	"pi"  -> 3.1415
-												   ("phi",1.68033) }  "phi" -> 1.68033 */
+						       ("pi", 3.1415),	"pi"  -> 3.1415
+						       ("phi",1.68033) }  "phi" -> 1.68033 */
 
 	m.insert(std::make_pair("G", 0.83462)); /* { ("e", 2.71828),   "e"   -> 2.71828
-												 ("pi", 3.1415),   "pi"  -> 3.1415
-												 ("phi", 1.68033), "phi" -> 1.68033
-												 ("G", 0.83462) }  "G"   -> 0.83462 */
+						     ("pi", 3.1415),   "pi"  -> 3.1415
+						     ("phi", 1.68033), "phi" -> 1.68033
+						     ("G", 0.83462) }  "G"   -> 0.83462 */
 	// Affichage de toutes les paires.
 	for (std::map<const char*, double>::iterator it = m.begin(); it != m.end(); ++it)
 	{
