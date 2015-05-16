@@ -288,23 +288,26 @@ int main() {
 
 	// Insertion d'une première paire
 	// "e" -> 2.71828
-	m.insert(std::pair<const char*, double>("e", 2.71828));  // { ("e", 2.71828) }
+	m.insert(std::pair<const char*, double>("e", 2.71828)); // { ("e", 2.71828) }
 
 	// Il est possible d'utiliser std::make_pair pour ne
 	// pas avoir à préciser le type des paires
 	// soit  (const char* -> double)
 
-	m.insert(std::make_pair("pi", 3.1415)); /* { ("e", 2.71828),  "e" -> 2.71828
-						     ("pi", 3.1415) } "pi" -> 3.1415 */
+	m.insert(std::make_pair("pi", 3.1415)); 
+	/* { ("e", 2.71828),  "e" -> 2.71828
+	     ("pi", 3.1415) } "pi" -> 3.1415 */
 
-	m.insert(std::make_pair("phi", 1.68033)); /* { ("e", 2.71828),	"e"   -> 2.71828
-						       ("pi", 3.1415),	"pi"  -> 3.1415
-						       ("phi",1.68033) }  "phi" -> 1.68033 */
+	m.insert(std::make_pair("phi", 1.68033)); 
+	/* { ("e", 2.71828),	"e"   -> 2.71828
+	     ("pi", 3.1415),	"pi"  -> 3.1415
+	     ("phi",1.68033) }  "phi" -> 1.68033 */
 
-	m.insert(std::make_pair("G", 0.83462)); /* { ("e", 2.71828),   "e"   -> 2.71828
-						     ("pi", 3.1415),   "pi"  -> 3.1415
-						     ("phi", 1.68033), "phi" -> 1.68033
-						     ("G", 0.83462) }  "G"   -> 0.83462 */
+	m.insert(std::make_pair("G", 0.83462));
+	/* { ("e", 2.71828),   "e"   -> 2.71828
+	     ("pi", 3.1415),   "pi"  -> 3.1415
+	     ("phi", 1.68033), "phi" -> 1.68033
+	     ("G", 0.83462) }  "G"   -> 0.83462 */
 	// Affichage de toutes les paires.
 	for (std::map<const char*, double>::iterator it = m.begin(); it != m.end(); ++it)
 	{
