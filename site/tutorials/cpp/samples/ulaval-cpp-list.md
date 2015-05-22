@@ -1,5 +1,5 @@
 
-#Exemples de liste
+#Exemple d'une liste doublement chaînée
 
 ######La classe list
 [list.hpp](../../../../cpp/include/ulaval/container/list.hpp)  
