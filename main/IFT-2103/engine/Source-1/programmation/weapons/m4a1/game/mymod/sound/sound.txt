@@ -1,0 +1,8 @@
+weapons/m4a1/m4a1_boltpull.wav
+weapons/m4a1/m4a1_clipin.wav
+weapons/m4a1/m4a1_clipout.wav
+weapons/m4a1/m4a1_deploy.wav
+weapons/m4a1/m4a1_silencer_off.wav
+weapons/m4a1/m4a1_silencer_on.wav
+weapons/m4a1/m4a1_unsil-1.wav
+weapons/m4a1/m4a1-1.wav

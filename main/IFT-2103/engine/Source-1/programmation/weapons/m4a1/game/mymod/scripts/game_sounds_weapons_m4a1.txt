@@ -1,0 +1,114 @@
+
+//M4A1
+"Weapon_M4A1.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"0.52"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			")weapons/m4a1/m4a1_unsil-1.wav"
+	
+}
+
+"Weapon_M4A1.Silenced"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.4"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			")weapons/m4a1/m4a1-1.wav"
+}
+
+"Weapon_M4A1.Silencer_Off"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"95,105"
+
+	"wave"			"weapons/m4a1/m4a1_silencer_off.wav"
+}
+
+"Weapon_M4A1.Silencer_On"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"95,105"
+
+	"wave"			"weapons/m4a1/m4a1_silencer_on.wav"
+}
+
+"Weapon_M4A1.Clipout"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			"weapons/m4a1/m4a1_clipout.wav"
+}
+
+"Weapon_M4A1.Clipin"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			"weapons/m4a1/m4a1_clipin.wav"
+}
+
+"Weapon_M4A1.Boltpull"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			"weapons/m4a1/m4a1_boltpull.wav"
+}
+
+"Weapon_M4A1.Deploy"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			"weapons/m4a1/m4a1_deploy.wav"
+}
+
+
+"Default.ClipEmpty_Rifle"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			"weapons/ClipEmpty_Rifle.wav"
+}
+
+
+"Default.ClipEmpty_Pistol"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			"weapons/ClipEmpty_Pistol.wav"
+}
+
+"Default.Zoom"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"2.39"
+	"pitch"		"PITCH_NORM"
+
+	"wave"			"weapons/zoom.wav"
+}

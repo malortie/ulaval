@@ -1,0 +1,10 @@
+weapons/v_rif_m4a1.dx80.vtx
+weapons/v_rif_m4a1.dx90.vtx
+weapons/v_rif_m4a1.mdl
+weapons/v_rif_m4a1.sw.vtx
+weapons/v_rif_m4a1.vvd
+weapons/w_rif_m4a1.dx80.vtx
+weapons/w_rif_m4a1.dx90.vtx
+weapons/w_rif_m4a1.mdl
+weapons/w_rif_m4a1.sw.vtx
+weapons/w_rif_m4a1.vvd

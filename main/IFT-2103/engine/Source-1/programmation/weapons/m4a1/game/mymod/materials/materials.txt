@@ -1,0 +1,8 @@
+models/weapons/v_models/hands/v_hands.vmt
+models/weapons/v_models/hands/v_hands.vtf
+models/weapons/v_models/hands/v_hands_normal.vtf
+models/weapons/v_models/rif_m4a1/rif_m4a1.vmt
+models/weapons/v_models/rif_m4a1/rif_m4a1.vtf
+models/weapons/v_models/rif_m4a1/rif_m4a1_ref.vtf
+models/weapons/w_models/w_rif_m4a1/w_rif_m4a1.vmt
+models/weapons/w_models/w_rif_m4a1/w_rif_m4a1.vtf
