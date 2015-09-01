@@ -8,5 +8,8 @@ Cette section s'adresse principalement aux étudiants associés à l'[AEGLO](htt
 #### GIF-1003 GLO-2100 IFT 1904 IFT-2008
 * [Ressources envers le langage C++](tutorials/cpp/ulaval-cpp-main.md)
 
+#### IFT-2103 IFT-3100
+* [Ressources et tutoriaux](https://www.youtube.com/channel/UC6qk6JvDLeXuu-0Qy_eq2kg)
+
 ####Autres
 * [Le langage C](tutorials/c/ulaval-c-main.md)
