@@ -1,17 +1,3 @@
-# ulaval
-
-* [Wiki](https://github.com/malortie/ulaval#wiki)
-* [License](https://github.com/malortie/ulaval#license)
-
-
-##Description
-
-This repository is intended to be used as a reference, as well as a set of resources for anyone involved in IT, engineering or other disciplines related to computer science. Make sure to read the [Terms of use](https://github.com/malortie/ulaval#license) as listed below.
-
-##Wiki
-
-[Link to Wiki](https://github.com/malortie/ulaval/wiki).
-
 ##License
 
 This is free and unencumbered software released into the public domain.
